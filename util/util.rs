@@ -28,7 +28,7 @@ pub fn read_file_string(fname: &str) -> String {
 
 pub fn pause() {
     print!("continue? ");
-    std::io::stdout().flush();
+    std::io::stdout().flush().unwrap();
     let mut garbage = String::new();
     std::io::stdin().read_line(&mut garbage).unwrap();
 }
