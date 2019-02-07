@@ -1,4 +1,4 @@
-mod util;
+use util;
 
 fn main() {
     let instructions = read_instructions();
