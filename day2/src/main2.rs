@@ -1,5 +1,5 @@
-use util;
 use std::collections::HashSet;
+use util;
 
 fn main() {
     let words = get_words();
@@ -9,8 +9,8 @@ fn main() {
             Some(match_str) => {
                 println!("matching word is: {}", match_str);
                 return;
-            },
-            None => { }
+            }
+            None => {}
         };
     }
     println!("No matches found!");
@@ -23,17 +23,16 @@ fn process_word(word: &String, sim_map: &mut HashSet<String>) -> Option<String> 
         let mut new_str = word.clone();
         new_str.remove(i);
         if sim_map.contains(&new_str) {
-            return Some(new_str)
+            return Some(new_str);
         } else {
             word_sim_map.insert(new_str);
         }
     }
-    
+
     for val in word_sim_map {
         sim_map.insert(val);
     }
     return None;
-
 }
 
 fn get_words() -> Vec<String> {

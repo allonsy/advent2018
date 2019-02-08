@@ -1,5 +1,5 @@
-use util;
 use std::collections::HashMap;
+use util;
 
 fn main() {
     let words = get_words();
@@ -39,7 +39,6 @@ fn process_word(word: &String) -> (bool, bool) {
     }
 
     (has_double, has_triple)
-
 }
 
 fn get_words() -> Vec<String> {

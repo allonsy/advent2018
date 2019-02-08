@@ -1,5 +1,5 @@
-use util;
 use std::collections::HashSet;
+use util;
 
 fn main() {
     let mut seen_before = HashSet::new();
